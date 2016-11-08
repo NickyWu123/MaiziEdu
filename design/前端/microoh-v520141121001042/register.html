@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>注册</title>
+<link href="css/base.css" rel="stylesheet">
+<link href="css/microoh-v5.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/develop.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<header class="mobil-header">
+  <a href="index.html" class="a-left">返回</a>注册<a href="login.html" class="a-right">登陆</a>
+</header>
+<div class="mobil-login-register">
+  <section class="box-register v5-input-txt" id="box-register">
+    <ul class="register-tabs" role="tablist">
+      <li class="active"><a href="#register-email" role="tab" data-toggle="tab">邮箱注册</a></li>
+      <li><a href="#register-mobile" role="tab" data-toggle="tab">手机注册</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="register-email">
+        <div class="form-group"><input type="text" class="form-control" placeholder="请输入邮箱账号"></div>
+        <div class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></div>
+        <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="test/yzm.jpg">换一张</a></span></div>             
+      </div>
+      <div class="tab-pane" id="register-mobile">
+        <div class="form-group cf">
+          <input type="text" class="form-control form-control-phone fl" placeholder="请输入手机号">
+          <span class="send-code fr"><button type="button" class="btn btn-micv5 btn-send">发送验证码</button></span>
+        </div>
+        <div class="form-group"><input type="text" class="form-control" placeholder="请输入短信验证码"></div>
+        <div class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></div>
+        <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="test/yzm.jpg">换一张</a></span></div>
+      </div>
+    </div>
+    <p class="good-tips">已经有账号？<a href="login.html">立即登录</a></p>
+    <div>
+      <button type="button" class="btn btn-micv5 btn-block">注册并登录</button>
+    </div>
+    <div class="tips-error bg-danger">错误提示</div>
+  </section>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/microoh-v5.js"></script>
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript">
+$(function() {
+  
+});
+</script>
+</body>
+</html>

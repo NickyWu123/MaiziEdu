@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<title>chart</title>
+	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="javascripts/esl.js"></script>
+	<script type="text/javascript" src="javascripts/main.js"></script>
+
+    <link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    <link href="css/style.css" rel='stylesheet' />
+</head>
+<body>
+    <div class="learn-plan-charts">
+        <div class="fl">
+            <ul class="process">
+                <li class="li1">100%</li>
+                <li class="li2">50%</li>
+                <li class="li3">0</li>
+            </ul>
+        </div>
+    	<div id="chart-box" class="chart-box fl">
+            <div class="right-size">
+                <div class="chart-line">
+                    <ul class="table-name">
+                       <li style="width:110px;height:50px;">
+                           <p class="font-color-es ">&nbsp;完成度(%)</p>
+                       </li>
+                    </ul>
+                    <div class="table-content" height="157">
+                        <ul class="odd">
+
+                        </ul>
+                        <ul class="even">
+
+                        </ul>
+                    </div>
+                    <ul class="table-line">
+
+                    </ul>
+                </div>
+                <div class="date">
+                    <ul height="25" class="table-date">
+
+                    </ul>
+                </div>
+    	    </div>
+            <div id="charts-box-canvas" ></div>
+    	</div>
+        <div class="learn-plan-tips">
+            <p>一些课程的提示数据</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+            /*
+             * @note
+             * process : 课程阶段
+             * class   : 第几堂
+             * state   : 0 -> 正常上课 1 -> 重修
+             * classDate : 开始时间
+             * interval : 相隔天数
+             */
+            var chart = new chart();
+            chart.init({
+                classList :
+                        [
+                            
+                            { process: "阶段1", iclass: "第1课", state  : "reset" , rank: 0, msg: ['视频观看：0/37',],interval:"7"},
+                            
+                            { process: "阶段1", iclass: "第1课", state  : "off" , rank: 0, msg: ['视频观看：0/37',],interval:"1"},
+                            
+                            { process: "阶段1", iclass: "第1课", state  : "rest" , rank: 0, msg: ['请假去旅游'],interval:"1"},
+                            
+                            { process: "阶段1", iclass: "第1课", state  : "off" , rank: 0, msg: ['视频观看：0/37',],interval:"6"},
+                            
+                            { process: "阶段1", iclass: "第2课", state  : "on" , rank: 0, msg: ['视频观看：0/11',],interval:"7"},
+                            
+                            { process: "阶段1", iclass: "第3课", state  : "on" , rank: 0, msg: ['视频观看：0/7',],interval:"7"},
+                            
+                            { process: "阶段1", iclass: "第4课", state  : "on" , rank: 0, msg: ['视频观看：0/7',],interval:"7"},
+                            
+                            { process: "阶段1", iclass: "第5课", state  : "on" , rank: 0, msg: ['视频观看：0/16',],interval:"7"},
+                            
+                            { process: "阶段2", iclass: "第1课", state  : "on" , rank: 0, msg: ['视频观看：0/6',],interval:"7"},
+                            
+                            { process: "阶段2", iclass: "第2课", state  : "on" , rank: 0, msg: ['视频观看：0/9',],interval:"7"},
+                            
+                            { process: "阶段2", iclass: "第3课", state  : "on" , rank: 0, msg: ['视频观看：0/32',],interval:"7"},
+                            
+                            { process: "阶段2", iclass: "第4课", state  : "on" , rank: 0, msg: ['视频观看：0/66',],interval:"7"},
+                            
+                            { process: "阶段2", iclass: "第5课", state  : "on" , rank: 100, msg: [],interval:"14"},
+                            
+                            { process: "阶段3", iclass: "第1课", state  : "on" , rank: 0, msg: ['视频观看：0/16',],interval:"7"},
+                            
+                            { process: "阶段3", iclass: "第2课", state  : "on" , rank: 0, msg: ['视频观看：0/19',],interval:"7"},
+                            
+                            { process: "阶段3", iclass: "第3课", state  : "on" , rank: 0, msg: ['视频观看：0/6',],interval:"7"},
+                            
+                            { process: "阶段3", iclass: "第4课", state  : "on" , rank: 0, msg: ['视频观看：0/3',],interval:"7"},
+                            
+                            { process: "阶段3", iclass: "第5课", state  : "on" , rank: 0, msg: ['视频观看：0/36',],interval:"7"},
+                            
+                            { process: "阶段3", iclass: "第6课", state  : "on" , rank: 100, msg: [],interval:"14"},
+                            
+                            { process: "阶段3", iclass: "第7课", state  : "on" , rank: 100, msg: [],interval:"21"},
+                            
+                            { process: "阶段4", iclass: "第1课", state  : "on" , rank: 0, msg: ['视频观看：0/14',],interval:"7"},
+                            
+                            { process: "阶段5", iclass: "第1课", state  : "on" , rank: 100, msg: [],interval:"7"},
+                            
+                            { process: "阶段5", iclass: "第2课", state  : "on" , rank: 0, msg: ['视频观看：0/6',],interval:"7"},
+                            
+                            { process: "阶段5", iclass: "第3课", state  : "on" , rank: 100, msg: [],interval:"7"},
+                            
+                            { process: "阶段5", iclass: "第4课", state  : "on" , rank: 100, msg: [],interval:"7"},
+                            
+                            { process: "阶段5", iclass: "第5课", state  : "on" , rank: 100, msg: [],interval:"7"},
+                            
+                            { process: "阶段5", iclass: "第6课", state  : "on" , rank: 100, msg: [],interval:"7"},
+                            
+                            { process: "阶段5", iclass: "第7课", state  : "on" , rank: 0, msg: ['视频观看：0/6',],interval:"7"},
+                            
+                            { process: "阶段5", iclass: "第8课", state  : "on" , rank: 0, msg: ['视频观看：0/6',],interval:"7"},
+                            
+                            { process: "阶段5", iclass: "第9课", state  : "on" , rank: 0, msg: ['视频观看：0/17',],interval:"7"}
+                            
+                        ],
+                classDate : { startDay : "2014-11-25"}
+            });
+
+            $(function(){
+                $('.chart-box').jScrollPane();
+            });
+    </script>
+

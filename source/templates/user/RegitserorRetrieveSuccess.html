@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>邮箱验证成功回执页面</title>
+<link href="{% static 'css/base.css' %}" rel="stylesheet">
+<link href="{% static 'css/microoh-v5.css' %}" rel="stylesheet">
+<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+<link href="{% static 'css/develop.css' %}" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="v5-tips">
+  <i class="v5-icon v5-icon-right"></i>
+
+   {% if msg.error %}
+       <span>此页面异常</span>
+   {% else %}
+       {% if msg.info == 'register' %}
+               {% if user %}
+                   {% if user.is_active %}
+                        <span>该用户已激活</span>
+                   {% else %}
+                      <span>请前往目标邮件激活用户</span>
+                   {% endif %}
+               {% else %}
+                      <span>该用户不存在</span>
+               {% endif %}
+       {% elif msg.info == 'retrieve'%}
+               {% if user %}
+                    请前往目标邮件点击链接修改密码
+               {% else %}
+                      <span>该用户不存在</span>
+               {% endif %}
+       {% else %}
+           错误链接
+       {% endif %}
+   {% endif %}
+<span id="show"></span>
+<script>
+        var t=3;//设定跳转的时间
+        setInterval("refer()",1000); //启动1秒定时
+        function refer(){
+            if(t==0){
+               location="/"; //#设定跳转的链接地址
+            }
+                document.getElementById('show').innerHTML=""+t+"秒后跳转到主页"; // 显示倒计时
+                t--; // 计数器递减
+                //本文转自：
+        }
+</script>
+
+</div>
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/jquery-migrate-1.2.1.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/microoh-v5.js' %}"></script>
+<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+</body>
+</html>

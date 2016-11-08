@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>首页</title>
+<link href="css/base.css" rel="stylesheet">
+<link href="css/microoh-v5.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/develop.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="microoh-main">
+  <header class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="64">
+    <div class="container">
+      <div class="navbar-header">
+      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#microoh-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="" title="麦子学院"><img src="images/logo.png"><img src="images/logo-font.png"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="microoh-navbar-collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="">职业课程</a></li>
+          <li><a href="">论坛</a></li>
+          <li><a href="">移动APP</a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <i class="v5-icon v5-icon-search"></i>
+            <input type="text" class="form-control" id="search" placeholder="搜索你感兴趣的课程">
+          </div>
+          <div class="search-dp" id="hotkeyword">
+          	<!--推荐关键词-->
+            <div class="hotkeyword">
+              <h4>推荐搜索关键词</h4>
+              <ul class="cf">
+                <li><a href="">Android</a></li>
+                <li><a href="">Android</a></li>
+                <li><a href="">WP</a></li>
+                <li><a href="">Android</a></li>
+                <li><a href="">WP</a></li>
+                <li><a href="">Android</a></li>
+                <li><a href="">WP</a></li>
+                <li><a href="">Android</a></li>
+              </ul>
+            </div>
+          </div>
+        </form>
+        <div class="v5-topbar-login">
+          <div class="v5-topbar-login-off" style="display:none;">
+            <a href="#" data-toggle="modal" data-target="#loginModal">登录</a>
+          </div>
+          <div class="v5-topbar-login-on cf">
+            <dl>
+              <dt>
+                <a href="" class="dt-username"><span>184545848</span><i class="v5-icon v5-icon-rd"></i></a>
+              </dt>
+            </dl>
+            <!--<a href="" class="dt-usermsg"><i class="v5-icon v5-icon-nomsg"></i></a>-->
+            <a href="" class="dt-usermsg"><i class="v5-icon v5-icon-havemsg"></i><em>3</em></a>
+          </div>
+        </div>
+      </div>
+      <!--搜索结果-->
+      <div class="search-dp" id="keyword-group">        
+        <div class="keyword-group scroll-pane">
+          <dl>
+            <dt>职业课程</dt>
+            <dd class="cf">
+              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
+              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
+              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>其他课程</dt>
+            <dd class="cf">
+              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
+              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
+              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
+              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
+              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
+              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
+              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
+              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
+              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
+              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
+              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
+              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
+              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
+              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
+              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
+              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
+              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
+              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="v5-banner-big">
+    <div class="container">
+      <div class="carousel-container">
+        <div id="carousel">
+          <div class="carousel-feature">
+            <a href="#"><img class="carousel-image" alt="Image Caption" src="test/1.jpg"></a>
+          </div>
+          <div class="carousel-feature">
+            <a href="#"><img class="carousel-image" alt="Image Caption" src="test/1.jpg"></a>
+          </div>
+          <div class="carousel-feature">
+            <a href="#"><img class="carousel-image" alt="Image Caption" src="test/1.jpg"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="v5-index-main">
+    <div class="v5-titline"></div>
+    <div class="container">
+      <div class="v5-recommend">
+        <div class="v5-tabs-box" id="v5-tabs">
+          <ul class="v5-tabs" id="v5-tabs" role="tablist">
+            <li class="active"><a href="#new" class="is-active" role="tab" data-toggle="tab">最新课程</a></li>
+            <li><a href="#most" role="tab" data-toggle="tab">最多播放</a></li>
+            <li><a href="#hot" role="tab" data-toggle="tab">最具人气</a></li>
+          </ul>
+          <div class="tabs-container tab-content">
+            <div class="v5-course-item tab-pane fade in active" id="new" data-holder="holdernew">
+              <div class="page-item">
+                <ul class="row course-list-index">
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="page-bg-w">
+                <div class="row v5-pages">
+                  <div class="col-sm-12 v5-pages-list">
+                    <ul class="row fr">
+                      <li><a href="" class="v5-icon v5-icon-prev"></a></li>
+                      <li><a href="" class="page-num active">1</a></li>
+                      <li><a href="" class="page-num">2</a></li>
+                      <li><a href="" class="page-num">3</a></li>
+                      <li><a href="" class="page-num">4</a></li>
+                      <li><a href="" class="page-num">5</a></li>
+                      <li><a href="" class="v5-icon v5-icon-next"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="v5-course-item tab-pane fade" id="most" data-holder="holdermost">
+            	<div class="page-item">
+                <ul class="row course-list-index">
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="page-bg-w">
+                <div class="row v5-pages">
+                  <div class="col-sm-12 v5-pages-list">
+                    <ul class="row fr">
+                      <li><a href="" class="v5-icon v5-icon-prev"></a></li>
+                      <li><a href="" class="page-num active">1</a></li>
+                      <li><a href="" class="page-num">2</a></li>
+                      <li><a href="" class="page-num">3</a></li>
+                      <li><a href="" class="page-num">4</a></li>
+                      <li><a href="" class="page-num">5</a></li>
+                      <li><a href="" class="v5-icon v5-icon-next"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <div class="v5-course-item tab-pane fade" id="hot" data-holder="holderhot">
+              <div class="page-item">
+                <ul class="row course-list-index">
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                  <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="">
+                      <dl>
+                        <dt>
+                          <div><img src="test/17.jpg"></div>
+                        </dt>
+                        <dd>
+                          <span>IO8 APP开发快速入门</span>
+                          <p>1850人正在学习</p>
+                        </dd>
+                      </dl>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="page-bg-w">
+                <div class="row v5-pages">
+                  <div class="col-sm-12 v5-pages-list">
+                    <ul class="row fr">
+                      <li><a href="" class="v5-icon v5-icon-prev"></a></li>
+                      <li><a href="" class="page-num active">1</a></li>
+                      <li><a href="" class="page-num">2</a></li>
+                      <li><a href="" class="page-num">3</a></li>
+                      <li><a href="" class="page-num">4</a></li>
+                      <li><a href="" class="page-num">5</a></li>
+                      <li><a href="" class="v5-icon v5-icon-next"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="v5-titline">
+      <div class="container">
+        <h1>名师风采</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="tc-list">
+        <a id="prev" class="prev" href="#"></a>
+        <div class="tc-list-w">
+          <ul id="foo" class="cf">
+            <li>
+              <dl>
+                <dt><a href="" style="border-left-color:#00A388;"><img src="test/2.png"></a></dt>
+                <dd>
+                  <h2>杨丰盛</h2>
+                  <h3>安卓框架联盟总架构师</h3>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="" style="border-left-color:#FF6038;"><img src="test/17.jpg"></a></dt>
+                <dd>
+                  <h2>杨丰盛</h2>
+                  <h3>安卓框架联盟总架构师</h3>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="" style="border-left-color:#00A388;"><img src="test/2.png"></a></dt>
+                <dd>
+                  <h2>杨丰盛</h2>
+                  <h3>安卓框架联盟总架构师</h3>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="" style="border-left-color:#78BD8B;"><img src="test/2.png"></a></dt>
+                <dd>
+                  <h2>杨丰盛</h2>
+                  <h3>安卓框架联盟总架构师</h3>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <a id="next" class="next" href="#"></a>
+      </div>
+    </div>
+    <div class="v5-titline">
+      <div class="container">
+        <h1>推荐阅读</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="v5-read cf">
+        <div class="v5-read-item">
+          <div class="v5-read-list" style="background-color:#00A388;">
+            <h1>麦子百科</h1>
+            <ul>
+              <li><a href="" title="发现创新价值的科技媒体">发现创新价值的科技媒体</a></li>
+              <li><a href="" title="iOS 和 Android 之争可以终结了">iOS 和 Android 之争可以终结了</a></li>
+              <li><a href="" title="加码云计算市场，惠普近 1 亿收购云软件公司">加码云计算市场，惠普近 1 亿收购云软件公司</a></li>
+              <li><a href="" title="HTC 智能手表：传并未放弃，正努力改进">HTC 智能手表：传并未放弃，正努力改进</a></li>
+              <li><a href="" title="第一次！首批 Android app 上架 Chrome ">第一次！首批 Android app 上架 Chrome</a></li>
+            </ul>
+          </div>
+          <p><img src="test/3.jpg"></p>
+        </div>
+        <div class="v5-read-item v5-read-item-mid">
+          <p><img src="test/4.jpg"></p>
+          <div class="v5-read-list" style="background-color:#FF6138;">
+            <h1>麦子百科</h1>
+            <ul>
+              <li><a href="" title="发现创新价值的科技媒体">发现创新价值的科技媒体</a></li>
+              <li><a href="" title="iOS 和 Android 之争可以终结了">iOS 和 Android 之争可以终结了</a></li>
+              <li><a href="" title="加码云计算市场，惠普近 1 亿收购云软件公司">加码云计算市场，惠普近 1 亿收购云软件公司</a></li>
+              <li><a href="" title="HTC 智能手表：传并未放弃，正努力改进">HTC 智能手表：传并未放弃，正努力改进</a></li>
+              <li><a href="" title="第一次！首批 Android app 上架 Chrome ">第一次！首批 Android app 上架 Chrome</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="v5-read-item">
+          <div class="v5-read-list" style="background-color:#00A388;">
+            <h1>麦子百科</h1>
+            <ul>
+              <li><a href="" title="发现创新价值的科技媒体">发现创新价值的科技媒体</a></li>
+              <li><a href="" title="iOS 和 Android 之争可以终结了">iOS 和 Android 之争可以终结了</a></li>
+              <li><a href="" title="加码云计算市场，惠普近 1 亿收购云软件公司">加码云计算市场，惠普近 1 亿收购云软件公司</a></li>
+              <li><a href="" title="HTC 智能手表：传并未放弃，正努力改进">HTC 智能手表：传并未放弃，正努力改进</a></li>
+              <li><a href="" title="第一次！首批 Android app 上架 Chrome ">第一次！首批 Android app 上架 Chrome</a></li>
+            </ul>
+          </div>
+          <p><img src="test/5.jpg"></p>
+        </div>
+      </div>
+    </div>
+    <div class="v5-titline">
+      <div class="container">
+        <h1>战略合作</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="v5-strategic">
+        <ul class="cf">
+          <li>
+            <a href=""><img src="test/6.png"></a>
+          </li>
+          <li>
+            <a href=""><img src="test/7.png"></a>
+          </li>
+          <li>
+            <a href=""><img src="test/9.png"></a>
+          </li>
+          <li>
+            <a href=""><img src="test/10.png"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="v5-footer">
+    <div class="container">
+      <div class="v5-footer-container">
+        <div class="v5-footer-links cf">
+          <dl class="f-link">
+            <dt>友情链接</dt>
+            <dd>
+              <ul>
+                <li class="cf">
+                  <a href="">网易云课堂</a><span>|</span>
+                  <a href="">腾讯课堂</a><span>|</span>
+                  <a href="">微信营销</a><span>|</span>
+                  <a href="">文档转换网</a><span>|</span>
+                  <a href="">浪曦IT视频</a><span>|</span>
+                  <a href="">自主学习网</a><span>|</span>
+                  <a href="">网易云课堂</a><span>|</span>
+                  <a href="">腾讯课堂</a><span>|</span>
+                  <a href="">微信营销</a><span>|</span>
+                  <a href="">浪曦IT视频</a><span>|</span>
+                  <a href="">自主学习网</a><span>|</span>
+                  <a href="">网易云课堂</a><span>|</span>
+                  <a href="">腾讯课堂</a><span>|</span>
+                  <a href="">微信营销</a><span>|</span>
+                </li>
+                <li class="cf">
+                  <a href="">网易云课堂</a><span>|</span>
+                  <a href="">腾讯课堂</a><span>|</span>
+                  <a href="">微信营销</a><span>|</span>
+                  <a href="">文档转换网</a><span>|</span>
+                  <a href="">浪曦IT视频</a><span>|</span>
+                  <a href="">自主学习网</a><span>|</span>
+                  <a href="">网易云课堂</a><span>|</span>
+                  <a href="">腾讯课堂</a><span>|</span>
+                  <a href="">微信营销</a><span>|</span>
+                  <a href="">浪曦IT视频</a><span>|</span>
+                  <a href="">自主学习网</a><span>|</span>
+                  <a href="">网易云课堂</a><span>|</span>
+                  <a href="">腾讯课堂</a><span>|</span>
+                  <a href="">微信营销</a><span>|</span>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="follow">
+            <dt>关注我们</dt>
+            <dd>
+              <ul>
+                <li><a href=""><span class="sina"></span>新浪微博</a></li>
+                <li><a href=""><span class="weixin"></span>官方微信</a></li>
+                <li><a href=""><span class="qq"></span>腾讯微博</a></li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="webmap">
+            <dt>网站导航</dt>
+            <dd>
+              <ul>
+                <li><a href="">网站首页</a></li>
+                <li><a href="">关于我们</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">意见反馈</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <div class="v5-footer-bottom">
+          <p>© 2012-2014 maiziedu.com | 服务条款 | 蜀ICP备13014270号-4 Version 4.0.1 release20140721.1</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--登录-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="loginModalLabel">登录</h4>
+      </div>
+      <div class="modal-body">
+        <section class="box-login v5-input-txt" id="box-login">
+          <ul>
+            <li class="form-group has-error"><input type="text" class="form-control" placeholder="请输入邮箱账号/手机号"></li>
+            <li class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></li>
+          </ul>
+          <p class="good-tips"><a href="#" data-toggle="modal" data-target="#forgetpswModal" id="btnForgetpsw" class="fr">忘记密码？</a>还没有账号？<a href="" data-toggle="modal" data-target="#registerModal" id="btnRegister">立即注册</a></p>
+          <div>
+            <button type="button" class="btn btn-micv5 btn-block">登录</button>
+          </div>
+          <div class="tips-error bg-danger">错误提示</div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<!--找回密码-->
+<div class="modal fade" id="forgetpswModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="forgetpswModalLabel">找回密码</h4>
+      </div>
+      <div class="modal-body">
+        <section class="box-forgetpsw v5-input-txt" id="box-forgetpsw">
+          <ul>
+            <li class="form-group has-error"><input type="text" class="form-control" placeholder="请输入注册邮箱账号或手机号码"></li>
+          </ul>
+          <div>
+            <button type="button" class="btn btn-micv5 btn-block">提交</button>
+          </div>
+          <div class="tips-error bg-danger">错误提示</div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--注册-->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="registerModalLabel">注册</h4>
+      </div>
+      <div class="modal-body">
+        <section class="box-register v5-input-txt" id="box-register">
+          <ul class="register-tabs" role="tablist">
+            <li class="active"><a href="#register-email" role="tab" data-toggle="tab">邮箱注册</a></li>
+            <li><a href="#register-mobile" role="tab" data-toggle="tab">手机注册</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="register-email">
+            	<div class="form-group"><input type="text" class="form-control" placeholder="请输入邮箱账号"></div>
+              <div class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></div>
+              <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="test/yzm.jpg">换一张</a></span></div>            	
+            </div>
+            <div class="tab-pane" id="register-mobile">
+            	<div class="form-group cf"><input type="text" class="form-control form-control-phone fl" placeholder="请输入手机号"><span class="fr"><button type="button" class="btn btn-micv5 btn-send">发送验证码</button></span></div>
+              <div class="form-group"><input type="text" class="form-control" placeholder="请输入短信验证码"></div>
+              <div class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></div>
+              <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="test/yzm.jpg">换一张</a></span></div>
+            </div>
+          </div>
+          <p class="good-tips">已经有账号？<a href="#" data-toggle="modal" data-target="#loginModal" id="btnLogin">立即登录</a></p>
+          <div>
+            <button type="button" class="btn btn-micv5 btn-block">注册并登录</button>
+          </div>
+          <div class="tips-error bg-danger">错误提示</div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--登陆后-->
+<div class="show-card animated hidden">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="td-userhd"><span class="user-pic"><img src="test/15.jpg"></span></td>
+      <td align="right" class="text-align-r">
+        <a href="" class="link-default">184545848</a>
+        <div class="user-email">184545848@mail.com</div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><a href="" class="btn btn-micv5 btn-md btn-block">进入个人中心</a></td>
+    </tr>
+    <tr>
+      <td colspan="2"><a href="" class="link-cancel">注销</a></td>
+    </tr>
+  </table>
+</div>
+
+<!--意见反馈-->
+<div class="feedback">
+  <div class="feedback-switch"></div>
+  <div class="feedback-title">
+  	 意见反馈
+  </div>
+  <div class="feedback-body">
+    <ul>
+      <li class="form-group"><input type="text" class="form-control" placeholder="请输入您的QQ号方便我们联系您"></li>
+      <li class="form-group"><textarea class="form-control" rows="5" placeholder="使用过程中有什么意见及建议请反 馈给我们吧"></textarea></li>
+      <li class="form-group"><button type="button" class="btn btn-micv5 btn-md btn-block">反馈</button></li>
+    </ul>
+  </div>
+</div>
+
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery.featureCarousel.min.js"></script>
+<script src="js/jquery.carouFredSel.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jPages.min.js"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script src="js/microoh-v5.js"></script>
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript">
+$(function() {
+	//大图切换
+	var carousel = $("#carousel").featureCarousel({
+		topPadding: 0,
+		sidePadding: 0,
+		smallFeatureOffset:	100,
+		trackerSummation: false
+	});
+	//首页名师切换
+	$('#foo').carouFredSel({
+		auto: false,
+		prev: '#prev',
+		next: '#next',
+		mousewheel: true,
+		items:{
+			visible:4,
+			minimum:1
+		},
+		scroll:{
+			items:1,
+			duration:1000
+		}
+	});
+  
+	//登录后 
+  function show_card(){
+    var _parent_left = $('.v5-topbar-login').offset().left;
+    var _parent_outw = $('.v5-topbar-login').outerWidth();
+    var _this_outw = $('.show-card').outerWidth();
+    var _this_left = Math.abs(_parent_left - (_this_outw - _parent_outw));  
+    $('.show-card').css({
+      'left': _this_left
+    })
+  }
+  show_card();
+  $(window).resize(function(){
+    show_card();
+  });
+  
+  $('.scroll-pane').jScrollPane({
+      autoReinitialise: true
+    });
+});
+</script>
+</body>
+</html>
