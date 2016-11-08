@@ -9,6 +9,9 @@ LoginApp.controller('validateLoginCtrl',function($scope,$http){
     $scope.loginUser=function(){
         $http.post('users/login/',$scope.login).success(
             function(data){
+                if(data['error']==true){
+                    alert('服务端异常,登陆失败')
+                }
                 if(data['isSuccess']==true){
                     window.location.href='/'
                 }else{

@@ -26,6 +26,9 @@ RegisterApp.controller('validateRegCtrl', function($scope,$http) {
                }else if(data['is_only']=='Only'){
                    $scope.isEmailNotOnly=false
                }
+                if(data['error']==true){
+                    alert('系统异常无法验证')
+                }
             }
         ).error(
             function(error){
@@ -49,6 +52,9 @@ RegisterApp.controller('validateRegCtrl', function($scope,$http) {
                     $scope.isCodeNotRight=false
                 }else{
                     $scope.isCodeNotRight=true
+                }
+                if(data['error']==true){
+                    alert('系统异常无法验证')
                 }
             }
         ).error(

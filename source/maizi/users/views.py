@@ -33,27 +33,33 @@ def validate_email(request):
     msg={}
     try:
         validate_email=str(json.loads(request.body)['email'])
+    except Exception,e:
+        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+    try:
         emaillist = UserProfile.objects.filter(email=validate_email)
         if emaillist:
             msg['is_only']='NotOnly'
         else:
             msg['is_only']='Only'
     except Exception,e:
-        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+        msg['error']=True
     return HttpResponse(json.dumps(msg), content_type="application/json")
 #验证验证码
 @csrf_exempt
 def validate_verification_code(request):
     msg={}
     try:
-        verification_code_in_session=str(request.session['verification_code'])
         verification_code=str(json.loads(request.body)['verification_code'])
+    except Exception,e:
+        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+    verification_code_in_session=str(request.session['verification_code'])
+    try:
         if verification_code.lower() == verification_code_in_session.lower():
             msg['is_verification_right']=True
         else:
             msg['is_verification_right']=False
     except Exception,e:
-        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+        msg['error']=True
     return HttpResponse(json.dumps(msg), content_type="application/json")
 #注册
 @csrf_exempt
@@ -65,6 +71,9 @@ def user_register(request):
         register_username=register_email.split('@')[0]
         register_password=body[u'registerPassword'].encode('utf-8')
         register_code=body[u'registerCode'].encode('utf-8')
+    except Exception,e:
+        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+    try:
         mail_activate_info={
                 'email':code_encrypt(register_email),
                 'verify_code':code_encrypt(random_str(4))
@@ -78,7 +87,7 @@ def user_register(request):
         user.save()
         msg['isSuccess']=True
     except Exception,e:
-        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+        msg['isSuccess']=False
     return HttpResponse(json.dumps(msg),content_type="application/json")
 #注册成功或注册邮箱发送后回执
 def registerorretrieve_sucess(request,param):
@@ -129,21 +138,25 @@ def user_login(request):
         email=body[u'email'].encode('utf-8')
         password=body[u'password'].encode('utf-8')
         user=authenticate(email=email, password=password)
-
+    except Exception,e:
+         return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+    try:
         if user:
             print user.is_active
             if user.is_active==False:
                 msg['isSuccess']=False
                 msg['is_NotActive']=True
+                msg['error']=False
             else:
                 user.backend = 'django.contrib.auth.backends.ModelBackend'
                 login(request,user)
                 msg['isSuccess']=True
+                msg['error']=False
         else:
             msg['isSuccess']=False
             msg['isNotActive']=False
     except Exception,e:
-         return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+         msg['error']=True
     return HttpResponse(json.dumps(msg),content_type="application/json")
 
 def user_logout(request):
@@ -156,6 +169,10 @@ def email_retrieve(request):
     try:
         body=json.loads(request.body)
         email=body[u'email'].encode('utf-8')
+    except Exception,e:
+        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+
+    try:
         user=UserProfile.objects.get(email=email)
         if user==None:
             msg['isSuccess']=False
@@ -170,7 +187,8 @@ def email_retrieve(request):
             request.session['verify_code_retrieve']=mail_retrieve_info['verify_code']
             msg['isSuccess']=True
     except Exception,e:
-        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+        print e
+        msg['error']=True
     # user=UserProfile.objects.get(email=email)
     return HttpResponse(json.dumps(msg),content_type="application/json")
 
@@ -195,6 +213,9 @@ def update_password(request):
     try:
         body=json.loads(request.body)
         password=body[u'password'].encode('utf-8')
+    except Exception,e:
+        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+    try:
         email=code_decrypt(request.session.get('email_retrieve'))
         b64_verify_code=request.session.get('verify_code_retrieve')
 
@@ -207,5 +228,5 @@ def update_password(request):
         login(request,user)
         msg['isSuccess']=True
     except Exception,e:
-        return render(request, 'user/ErrorUrl.html',{'error':'此地址异常'})
+        msg['isSuccess']=False
     return HttpResponse(json.dumps(msg),content_type="application/json")

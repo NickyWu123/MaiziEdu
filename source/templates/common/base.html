@@ -245,7 +245,7 @@
           <div class="tab-content">
             <div class="tab-pane active" id="register-email">
                 <div class="form-group"><input type="email"  ng-model="register.registerEmail" id='register-byemail-email' name='email' class="form-control" placeholder="请输入邮箱账号" ng-blur="validateEmail()" required></div>
-              <div class="form-group"><input type="password" minlength="6" maxlength="12" ng-model="register.registerPassword" id='register-byemail-password'name='password' class="form-control" placeholder="请输入密码"  required></div>
+              <div class="form-group"><input type="password" ng-minlength="6" ng-maxlength="12" ng-model="register.registerPassword" id='register-byemail-password'name='password' class="form-control" placeholder="请输入密码"  required></div>
               <div class="form-group cf"><input type="text"  ng-model="register.registerCode" id='register-byemail-code' name='verification_code' class="form-control form-control-captcha fl" ng-blur="validateCode()" placeholder="请输入验证码"  required>
                   <span class="v5-yzm fr"><img onclick="this.setAttribute('src','users/verification_code/?random='+Math.random())" src="users/verification_code/"></span></div>
             </div>
@@ -265,6 +265,8 @@
               <span ng-show="RegForm.email.$error.required">邮箱不能为空</span>
               <span ng-show="RegForm.email.$error.email">非法的邮箱地址</span>
               <span ng-show="RegForm.password.$error.required">密码不能为空</span>
+              <span ng-show="RegForm.password.$error.minlength">密码最少6位</span>
+              <span ng-show="RegForm.password.$error.maxlength">密码最多12位</span>
               <span ng-show="RegForm.verification_code.$error.required">验证码不能为空</span><br>
               <span ng-show="isEmailNotOnly==true">邮箱不唯一</span>
               <span ng-show="isCodeNotRight==true">验证码错误</span>
